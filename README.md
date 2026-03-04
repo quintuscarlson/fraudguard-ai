@@ -66,7 +66,9 @@ FraudGuard Backend (Node.js / Express)
      └── Conversation Scoring
             └── Groq / Llama Models
 ```
+
 ---
+
 ### Call Flow
 **1. User starts a simulation**
 The user enters their phone number and selects a scam scenario through the web interface.
