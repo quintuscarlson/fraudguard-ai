@@ -81,6 +81,7 @@ Infrastructure
 - Cloudflare tunnels for local development
 
 ## Project Structure
+```
 fraudguard-ai  
 │  
 ├── frontend  
@@ -93,7 +94,8 @@ fraudguard-ai
 │  
 ├── dev-run.sh  
 ├── .env.example  
-└── README.md  
+└── README.md
+```
 
 ## Setup
 ### 1. Clone the Repository 
@@ -104,34 +106,41 @@ cd fraudguard-ai
 
 ### 2. Install dependencies
 Backend  
-`cd backend`  
-`npm install`  
+```
+cd backend  
+npm install
+```  
 
 Frontend  
-`cd ../frontend`  
-`npm install`
+```cd ../frontend  
+npm install
+```
 
 ### 3. Create environment variables
 Create a `.env` file in the project root.  
 Example:  
-`TWILIO_ACCOUNT_SID=`  
-`TWILIO_AUTH_TOKEN=`  
-`TWILIO_PHONE_NUMBER=`  
+```
+TWILIO_ACCOUNT_SID=  
+TWILIO_AUTH_TOKEN=  
+TWILIO_PHONE_NUMBER=  
 
-`ELEVENLABS_API_KEY=`  
-`ELEVEN_AGENT_ID_LOTTERY=`  
-`ELEVEN_AGENT_ID_TECH=`  
-`ELEVEN_AGENT_ID_SOCIAL=`  
+ELEVENLABS_API_KEY=  
+ELEVEN_AGENT_ID_LOTTERY=  
+ELEVEN_AGENT_ID_TECH=  
+ELEVEN_AGENT_ID_SOCIAL=  
 
-`GROQ_API_KEY=`  
+GROQ_API_KEY=  
 
-`BASE_URL=`  
-`WSS_URL=`  
-`PORT=3000`  
+BASE_URL=  
+WSS_URL=  
+PORT=3000
+```  
 
 ### 4. Start the development environment
 From the project root:    
-`./dev-run.sh`  
+```
+./dev-run.sh
+```  
 
 This will:  
 - Start a Cloudflare tunnel  
@@ -139,9 +148,13 @@ This will:
 - Provide public URLs required for Twilio
 
 Then start the frontend:  
-`npm run dev`  
+```
+npm run dev
+```  
 Open the web interface:  
-`http://localhost:5173`
+```
+http://localhost:5173
+```
 
 ## Example Workflow
 1. User enters their phone number
