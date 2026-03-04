@@ -161,5 +161,12 @@ It should not be used for deceptive or malicious activity.
 - Analytics dashboards for training programs
 - Enterprise cybersecurity training integrations
 
+## Project Origin
+FraudGuard AI was originally developed during a hackathon as part of a team project focused on improving public awareness of phone scams and social engineering attacks.  
+
+During the hackathon, our team explored the idea of simulating realistic scam phone calls as a training tool. I was responsible for the majority of the system implementation, including the backend architecture, real-time audio streaming pipeline, AI integration, and scoring system.  
+
+The current version expands significantly on the original prototype and focuses on creating a fully interactive training experience powered by conversational AI.
+
 ## License
 MIT License
