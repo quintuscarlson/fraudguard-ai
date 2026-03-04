@@ -66,9 +66,6 @@ FraudGuard Backend (Node.js / Express)
      └── Conversation Scoring
             └── Groq / Llama Models
 ```
-
----
-
 ### Call Flow
 **1. User starts a simulation**
 The user enters their phone number and selects a scam scenario through the web interface.
@@ -87,7 +84,6 @@ Conversation transcripts are sent to the frontend dashboard through WebSockets.
 **8. Call ends and scoring begins**
 After the call ends, the transcript is analyzed by an LLM to generate a fraud awareness score based on the user's responses.
 
----
 ### Key Backend Components  
 **Session Manager**  
 Tracks active calls, transcripts, and scenario configurations.
@@ -252,11 +248,12 @@ It should not be used for deceptive or malicious activity.
 - Enterprise cybersecurity training integrations
 
 ## Project Origin
-FraudGuard AI was originally developed during a hackathon as part of a team project focused on improving public awareness of phone scams and social engineering attacks.  
 
-During the hackathon, our team explored the idea of simulating realistic scam phone calls as a training tool. I was responsible for the majority of the system implementation, including the backend architecture, real-time audio streaming pipeline, AI integration, and scoring system.  
+FraudGuard AI began as a hackathon project exploring how AI could be used to train people to recognize phone scams and social engineering tactics.
 
-The current version expands significantly on the original prototype and focuses on creating a fully interactive training experience powered by conversational AI.
+The initial concept focused on simulating realistic scam phone calls so users could experience common fraud scenarios in a safe environment. Following the hackathon, I continued developing the project independently, expanding the prototype into a full system with real-time voice conversations, AI-powered scam agents, and automated transcript analysis.
+
+The current version significantly extends the original idea, transforming it into an interactive training platform that uses conversational AI to simulate real-world scam calls and evaluate how users respond.
 
 ## License
 MIT License
