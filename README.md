@@ -84,7 +84,7 @@ Conversation transcripts are sent to the frontend dashboard through WebSockets.
 **8. Call ends and scoring begins**
 After the call ends, the transcript is analyzed by an LLM to generate a fraud awareness score based on the user's responses.
 
-## Key Backend Components
+### Key Backend Components  
 ### Session Manager  
 Tracks active calls, transcripts, and scenario configurations.
 
@@ -100,7 +100,7 @@ Uses an LLM to analyze transcripts and generate a safety score and explanation.
 ### WebSocket Gateway  
 Streams transcripts and scoring results to the frontend dashboard.
 
-## Real-Time Streaming Pipeline  
+### Real-Time Streaming Pipeline  
 The most critical component of FraudGuard AI is the real-time audio bridge between the phone call and the AI agent.
 ```
 User Speech
