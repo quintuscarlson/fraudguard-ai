@@ -14,7 +14,7 @@ Examples include:
 - Tech support scams
 - Social Security impersonation
 - Lottery or prize scams
-- 
+
 ### Dynamic AI conversations
 The scammer responds in real time instead of following a fixed script.
 
@@ -36,3 +36,103 @@ FraudGuard AI connects several services to create a real-time conversational pho
 5. The AI generates responses and converts them to speech.
 6. Audio is streamed back into the phone call.
 7. The transcript is analyzed after the call to generate a safety score.
+
+## Architecture
+Frontend
+React + Vite web application for controlling simulations and displaying transcripts.
+  
+Backend
+Node.js + Express server responsible for call orchestration, streaming, and scoring.
+  
+Voice AI
+ElevenLabs conversational agents generate realistic scammer voices.
+  
+Telephony
+Twilio handles phone calls and audio streaming.
+  
+Scoring Engine
+Groq-hosted LLM analyzes transcripts and produces a fraud awareness score.
+
+## Tech Stack
+Frontend
+- React
+- Vite
+- WebSockets
+
+Backend
+- Node.js
+- Express
+- WebSocket server
+
+AI / Voice
+- ElevenLabs conversational agents
+- Speech-to-text transcription
+- AI-generated responses
+
+Telephony
+- Twilio Programmable Voice
+- Twilio Media Streams
+
+AI Analysis
+- Groq API
+- Llama 3 models
+
+Infrastructure
+- Cloudflare tunnels for local development
+
+## Project Structure
+fraudguard-ai
+│
+├── frontend
+│   ├── src
+│   └── package.json
+│
+├── backend
+│   ├── server.js
+│   └── package.json
+│
+├── dev-run.sh
+├── .env.example
+└── README.md
+
+## Setup
+### 1. Clone the Repository 
+`git clone https://github.com/quintuscarlson/fraudguard-ai.git
+cd fraudguard-ai`
+
+### 2. Install dependencies
+Backend
+`cd backend
+npm install`
+Frontend
+`cd ../frontend
+npm install`
+
+### 3. Create environment variables
+Create a `.env` file in the project root.
+Example:
+`TWILIO_ACCOUNT_SID=
+TWILIO_AUTH_TOKEN=
+TWILIO_PHONE_NUMBER=
+
+ELEVENLABS_API_KEY=
+ELEVEN_AGENT_ID_DEFAULT=
+
+GROQ_API_KEY=
+
+BASE_URL=
+WSS_URL=
+PORT=3000`
+
+### 4. Start the development environment
+From the project root:  
+`./dev-run.sh`
+
+This will:
+- Start a Cloudflare tunnel
+- Launch the backend server
+- Provide public URLs required for Twilio
+Then start the frontend:
+`npm run dev`
+Open the web interface:
+`http://localhost:5173`
