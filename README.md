@@ -101,12 +101,12 @@ fraudguard-ai
 `cd fraudguard-ai`
 
 ### 2. Install dependencies
-Backend
-`cd backend
-npm install`
-Frontend
-`cd ../frontend
-npm install`
+Backend  
+`cd backend`  
+`npm install`  
+Frontend  
+`cd ../frontend`  
+`npm install`
 
 ### 3. Create environment variables
 Create a `.env` file in the project root.
