@@ -1,4 +1,4 @@
-# FraudGuard.ai
+# FraudGuard AI
 
 ## Overview
 FraudGuard AI is an **AI-powered scam awareness training platform** that simulates realistic phone scams in real time. Instead of reading about social engineering attacks, users experience them firsthand through a live phone call with an AI scammer.
