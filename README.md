@@ -115,12 +115,12 @@ Example:
 `TWILIO_ACCOUNT_SID=`  
 `TWILIO_AUTH_TOKEN=`  
 `TWILIO_PHONE_NUMBER=`  
-`                   `
+
 `ELEVENLABS_API_KEY=`  
 `ELEVEN_AGENT_ID_DEFAULT=`  
-`                       `
+
 `GROQ_API_KEY=`  
-`              `
+
 `BASE_URL=`  
 `WSS_URL=`  
 `PORT=3000`  
@@ -138,3 +138,26 @@ Then start the frontend:
 `npm run dev`  
 Open the web interface:  
 `http://localhost:5173`
+
+## Example Workflow
+1. User enters their phone number
+2. User selects a scam scenario
+3. The system calls the user
+4. A live AI scam conversation occurs
+5. The transcript appears on the dashboard
+6. The system generates a fraud awareness score
+
+## Security Notice
+FraudGuard AI is designed **only for educational and cybersecurity training purposes.**
+The system simulates scam tactics to help users recognize social engineering attacks and improve personal security awareness.
+It should not be used for deceptive or malicious activity.
+
+## Future Improvements
+- Additional scam scenarios
+- Real-time scam tactic detection
+- Adaptive difficulty levels
+- Analytics dashboards for training programs
+- Enterprise cybersecurity training integrations
+
+## License
+MIT License
