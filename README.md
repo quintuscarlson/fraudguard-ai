@@ -38,19 +38,19 @@ FraudGuard AI connects several services to create a real-time conversational pho
 7. The transcript is analyzed after the call to generate a safety score.
 
 ## Architecture
-Frontend
+Frontend  
 React + Vite web application for controlling simulations and displaying transcripts.
   
-Backend
+Backend  
 Node.js + Express server responsible for call orchestration, streaming, and scoring.
   
-Voice AI
+Voice AI  
 ElevenLabs conversational agents generate realistic scammer voices.
   
-Telephony
+Telephony  
 Twilio handles phone calls and audio streaming.
   
-Scoring Engine
+Scoring Engine  
 Groq-hosted LLM analyzes transcripts and produces a fraud awareness score.
 
 ## Tech Stack
@@ -81,23 +81,23 @@ Infrastructure
 - Cloudflare tunnels for local development
 
 ## Project Structure
-fraudguard-ai
-│
-├── frontend
-│   ├── src
-│   └── package.json
-│
-├── backend
-│   ├── server.js
-│   └── package.json
-│
-├── dev-run.sh
-├── .env.example
-└── README.md
+fraudguard-ai  
+│  
+├── frontend  
+│   ├── src  
+│   └── package.json  
+│  
+├── backend  
+│   ├── server.js  
+│   └── package.json  
+│  
+├── dev-run.sh  
+├── .env.example  
+└── README.md  
 
 ## Setup
 ### 1. Clone the Repository 
-`git clone https://github.com/quintuscarlson/fraudguard-ai.git
+`git clone https://github.com/quintuscarlson/fraudguard-ai.git  
 cd fraudguard-ai`
 
 ### 2. Install dependencies
