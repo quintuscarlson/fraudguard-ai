@@ -115,12 +115,12 @@ Example:
 `TWILIO_ACCOUNT_SID=`  
 `TWILIO_AUTH_TOKEN=`  
 `TWILIO_PHONE_NUMBER=`  
-
+`                   `
 `ELEVENLABS_API_KEY=`  
 `ELEVEN_AGENT_ID_DEFAULT=`  
-
+`                       `
 `GROQ_API_KEY=`  
-
+`              `
 `BASE_URL=`  
 `WSS_URL=`  
 `PORT=3000`  
