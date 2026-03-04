@@ -97,7 +97,7 @@ fraudguard-ai
 
 ## Setup
 ### 1. Clone the Repository 
-`git clone https://github.com/quintuscarlson/fraudguard-ai.git`
+`git clone https://github.com/quintuscarlson/fraudguard-ai.git`  
 `cd fraudguard-ai`
 
 ### 2. Install dependencies
