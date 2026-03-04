@@ -37,21 +37,92 @@ FraudGuard AI connects several services to create a real-time conversational pho
 6. Audio is streamed back into the phone call.
 7. The transcript is analyzed after the call to generate a safety score.
 
-## Architecture
-Frontend  
-React + Vite web application for controlling simulations and displaying transcripts.
-  
-Backend  
-Node.js + Express server responsible for call orchestration, streaming, and scoring.
-  
-Voice AI  
-ElevenLabs conversational agents generate realistic scammer voices.
-  
-Telephony  
-Twilio handles phone calls and audio streaming.
-  
-Scoring Engine  
-Groq-hosted LLM analyzes transcripts and produces a fraud awareness score.
+## System Architecture
+FraudGuard AI is built around a real-time audio pipeline that connects a phone call to an AI conversational agent through streaming infrastructure.  
+
+The system integrates telephony services, voice AI, and a web interface to create an interactive scam simulation environment.
+
+### High-Level Architecture
+```
+User Phone
+     │
+     ▼
+Twilio Programmable Voice
+     │
+     ▼
+Twilio Media Streams (WebSocket)
+     │
+     ▼
+FraudGuard Backend (Node.js / Express)
+     │
+     ├── Audio Transcoding (FFmpeg)
+     │
+     ├── Real-Time AI Conversation
+     │      └── ElevenLabs Conversational Agents
+     │
+     ├── Transcript Streaming
+     │      └── WebSocket → Browser UI
+     │
+     └── Conversation Scoring
+            └── Groq / Llama Models
+```
+### Call Flow
+**1. User starts a simulation**
+The user enters their phone number and selects a scam scenario through the web interface.
+**2. Backend initiates phone call**
+The backend uses Twilio’s Programmable Voice API to place a call to the user.
+**3. Twilio streams call audio**
+Twilio Media Streams sends live audio to the backend through a WebSocket connection.
+**4. Audio is transcoded**
+The backend converts audio formats between telephony standards and AI model requirements using FFmpeg.
+**5. AI generates responses**
+The user's speech is sent to an ElevenLabs conversational agent which generates scammer responses in real time.
+**6. AI speech is streamed back**
+The generated speech is converted back to telephony audio format and streamed into the phone call.
+**7. Transcript updates in real time**
+Conversation transcripts are sent to the frontend dashboard through WebSockets.
+**8. Call ends and scoring begins**
+After the call ends, the transcript is analyzed by an LLM to generate a fraud awareness score based on the user's responses.
+
+## Key Backend Components
+### Session Manager  
+Tracks active calls, transcripts, and scenario configurations.
+
+### Audio Pipeline  
+Handles bidirectional streaming between Twilio and the AI agent while converting audio formats.
+
+### Scenario System  
+Maps training scenarios to specific AI scam agents.
+
+### Scoring Engine  
+Uses an LLM to analyze transcripts and generate a safety score and explanation.
+
+### WebSocket Gateway  
+Streams transcripts and scoring results to the frontend dashboard.
+
+## Real-Time Streaming Pipeline  
+The most critical component of FraudGuard AI is the real-time audio bridge between the phone call and the AI agent.
+```
+User Speech
+   ↓
+Twilio Media Stream
+   ↓
+Backend WebSocket Server
+   ↓
+FFmpeg Audio Conversion
+   ↓
+ElevenLabs AI Agent
+   ↓
+Generated Speech
+   ↓
+FFmpeg Conversion
+   ↓
+Twilio Media Stream
+   ↓
+User Phone
+```
+
+This pipeline allows the system to maintain **low latency conversational interaction,** creating a realistic scam call experience.
 
 ## Tech Stack
 Frontend
