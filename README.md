@@ -112,18 +112,18 @@ Frontend
 ### 3. Create environment variables
 Create a `.env` file in the project root.  
 Example:  
-`TWILIO_ACCOUNT_SID=  
-TWILIO_AUTH_TOKEN=  
-TWILIO_PHONE_NUMBER=  
+`TWILIO_ACCOUNT_SID=`  
+`TWILIO_AUTH_TOKEN=`  
+`TWILIO_PHONE_NUMBER=`  
 
-ELEVENLABS_API_KEY=  
-ELEVEN_AGENT_ID_DEFAULT=  
+`ELEVENLABS_API_KEY=`  
+`ELEVEN_AGENT_ID_DEFAULT=`  
 
-GROQ_API_KEY=  
+`GROQ_API_KEY=`  
 
-BASE_URL=  
-WSS_URL=  
-PORT=3000`  
+`BASE_URL=`  
+`WSS_URL=`  
+`PORT=3000`  
 
 ### 4. Start the development environment
 From the project root:    
@@ -132,7 +132,8 @@ From the project root:
 This will:  
 - Start a Cloudflare tunnel  
 - Launch the backend server
-- Provide public URLs required for Twilio  
+- Provide public URLs required for Twilio
+
 Then start the frontend:  
 `npm run dev`  
 Open the web interface:  
