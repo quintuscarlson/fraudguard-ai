@@ -66,6 +66,7 @@ FraudGuard Backend (Node.js / Express)
      └── Conversation Scoring
             └── Groq / Llama Models
 ```
+---
 ### Call Flow
 **1. User starts a simulation**
 The user enters their phone number and selects a scam scenario through the web interface.
@@ -84,23 +85,24 @@ Conversation transcripts are sent to the frontend dashboard through WebSockets.
 **8. Call ends and scoring begins**
 After the call ends, the transcript is analyzed by an LLM to generate a fraud awareness score based on the user's responses.
 
+---
 ### Key Backend Components  
-### Session Manager  
+**Session Manager**  
 Tracks active calls, transcripts, and scenario configurations.
 
-### Audio Pipeline  
+**Audio Pipeline**  
 Handles bidirectional streaming between Twilio and the AI agent while converting audio formats.
 
-### Scenario System  
+**Scenario System**    
 Maps training scenarios to specific AI scam agents.
 
-### Scoring Engine  
+**Scoring Engine**    
 Uses an LLM to analyze transcripts and generate a safety score and explanation.
 
-### WebSocket Gateway  
+**WebSocket Gateway**    
 Streams transcripts and scoring results to the frontend dashboard.
 
-### Real-Time Streaming Pipeline  
+**Real-Time Streaming Pipeline**    
 The most critical component of FraudGuard AI is the real-time audio bridge between the phone call and the AI agent.
 ```
 User Speech
